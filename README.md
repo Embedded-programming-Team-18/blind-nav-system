@@ -1,5 +1,6 @@
-# Navigation system for blind people
 
+# Navigation system for blind people
+![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/v1643001489/blind-nav-system/smart_glove_3_pxaxcr.jpg)
 This project involves the development of an assistive tech based on real-time processing that can help individuals who are blind or with low vision to navigate with confidence.
 
 ## Introduction
