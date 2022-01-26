@@ -32,7 +32,7 @@ There are many assistive technologies that aid blind people navigate their envir
 
 ### How it Works
 - The LIDAR sensor(rotated by a servo motor) makes a map of 90o in front of the person.
-- Accordingly, the map and distance at which the obstacles the fingers get a feedback.
+- According to the map and distance at which the obstacles the fingers get a feedback.
 - Using that feedback the person and get an idea of where the obstacle is located, and he can go left or right.
   
 ### Contributors
