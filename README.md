@@ -18,13 +18,14 @@ There are many assistive technologies that aid blind people navigate their envir
 ![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/v1643001489/blind-nav-system/smart_glove_3_pxaxcr.jpg)
 
 ### Why Smart Glove?
-1. Good for mobility
-2. Flexible for position of a person
-3. Ease of use than cane
-4. More range than the stick
+1. Good for mobility as it is more compact.
+2. Flexible for position of a person because the direction of the sensor changes with the direction of the person.
+3. Ease of use than cane   with vibratic signal sent to the fingers.
+4. More range than the stick.
 
 ### Hardware Specification
 - TFMini S LIDAR Sensor
+`LiDAR sensors uses lasers with a much lower wavelength that causes them to have better accuracy and precision for  detecting smaller objects in more detail. The TFMini S LiDAR sensor can detect obstacles at within a range of 0.1m-12m @90% reflectivity and has a Field Of View of 2 degrees. Its anti-interference is strong and can work in outdoor light - dfrobot.com`
 - Raspberry PI 3
 - 5 Motors
 - Motor Driver
@@ -34,7 +35,7 @@ There are many assistive technologies that aid blind people navigate their envir
 - Accordingly, the map and distance at which the obstacles the fingers get a feedback.
 - Using that feedback the person and get an idea of where the obstacle is located, and he can go left or right.
   
-### Team Members
+### Contributors
 - Meghna Choudhury
 - Faiza Abdul Salam
 - Abdul Ghani Zahid
