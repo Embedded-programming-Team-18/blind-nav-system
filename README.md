@@ -13,7 +13,7 @@ This project involves the development of an assistive smart glove using Light De
 * [Team Members](#team-Members)
 
 ### Introduction
-There are many assistive technologies that aid blind people navigate their enviroment. These can be in eye glasses, walking canes, helmets etc. Some of these need to be combined with dogs, a smart phone or GPS and utilizes Ultrasonic sensors, IR or different light detection sensing for detecting obstacles and their distances. However, the usefulness of these devices are still in debate mostly due to a huge confidence in the traditional use of guide dogs and canes. Here a smart glove program is developed to tackle the navigation problem for blind people. Careful consideration is taken into ease of use, long range detection and real-time feedback method.
+There are many assistive technologies that aid blind people navigate their enviroment. These can be in eye glasses, walking canes, helmets etc. Some of these need to be combined with dogs, a smart phone or GPS and utilizes Ultrasonic sensors, IR or different light detection sensing for detecting obstacles and their distances. However, the usefulness of these devices are still in debate mostly due to a huge confidence in the traditional use of guide dogs and canes. Here a smart glove program is developed to tackle the navigation problem for blind people. Careful consideration is taken into ease of use for the blind individual, long range detection and real-time feedback using vibrotactile feedback.
    
 ![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/v1643001489/blind-nav-system/smart_glove_3_pxaxcr.jpg)
 
@@ -31,7 +31,7 @@ There are many assistive technologies that aid blind people navigate their envir
 
 ### How it Works
 - The LIDAR sensor(rotated by a servo motor) makes a map of 90o in front of the person.
-- According to map and distance at which the obstacles the fingers get a feedback.
+- Accordingly, the map and distance at which the obstacles the fingers get a feedback.
 - Using that feedback the person and get an idea of where the obstacle is located, and he can go left or right.
   
 ### Team Members
