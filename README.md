@@ -8,6 +8,7 @@ This project involves the development of an assistive smart glove using Light De
 
 * [Introduction](#introduction)
 * [Why Smart Glove](#why-Smart-Glove)
+* [Hardware Specification](#hardware-specification)
 * [How it Works](#how-it-works)
 * [Team Members](#team-Members)
 
@@ -21,6 +22,12 @@ There are many assistive technologies that aid blind people navigate their envir
 2. Flexible for position of a person
 3. Ease of use than cane
 4. More range than the stick
+
+### Hardware Specification
+- TFMini S LIDAR Sensor
+- Raspberry PI 3
+- 5 Motors
+- Motor Driver
 
 ### How it Works
 - The LIDAR sensor(rotated by a servo motor) makes a map of 90o in front of the person.
