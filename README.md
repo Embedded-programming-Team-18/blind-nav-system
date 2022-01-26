@@ -40,3 +40,6 @@ There are many assistive technologies that aid blind people navigate their envir
 - Faiza Abdul Salam
 - Abdul Ghani Zahid
 - Evelyn Onyi Anyebe
+
+### Reference Links
+- [https://uofglasgow.zoom.us/j/98042507132?pwd=WVdjRXFyb1VneTlNNmFGQ0VVUkRqQT09#success](dfrobot.com)
