@@ -7,9 +7,9 @@ This project involves the development of an assistive smart glove using Light De
 ## Contents
 
 * [Introduction](#introduction)
-* [Why Smart Glove?](#Why Smart Glove)
-* [How it Works](#How it works)
-* [Team Members](#Team Members)
+* [Why Smart Glove](#why-Smart-Glove)
+* [How it Works](#how-it-works)
+* [Team Members](#team-Members)
 
 ### Introduction
 There are many assistive technologies that aid blind people navigate their enviroment. These can be in eye glasses, walking canes, helmets etc. Some of these need to be combined with dogs, a smart phone or GPS and utilizes Ultrasonic sensors, IR or different light detection sensing for detecting obstacles and their distances. However, the usefulness of these devices are still in debate mostly due to a huge confidence in the traditional use of guide dogs and canes. Here a smart glove program is developed to tackle the navigation problem for blind people. Careful consideration is taken into ease of use, long range detection and real-time feedback method.
