@@ -1,7 +1,7 @@
 # Navigation System for Blind People - `Smart Glove`
 This project involves the development of an assistive smart glove using Light Detection and Ranging(LiDAR) technology and Raspbery pi to help individuals who are blind or with low vision to navigate with confidence.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](MIT License)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Contributors](https://img.shields.io/github/contributors/EvelynAnyebe/blind-nav-system)
 
 ## Contents
