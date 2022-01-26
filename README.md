@@ -24,10 +24,12 @@ There are many assistive technologies that aid blind people navigate their envir
 4. More range than the stick
 
 ### Hardware Specification
+`
 - TFMini S LIDAR Sensor
 - Raspberry PI 3
 - 5 Motors
 - Motor Driver
+`
 
 ### How it Works
 - The LIDAR sensor(rotated by a servo motor) makes a map of 90o in front of the person.
@@ -35,7 +37,7 @@ There are many assistive technologies that aid blind people navigate their envir
 - Using that feedback the person and get an idea of where the obstacle is located, and he can go left or right.
   
 ### Team Members
-* Meghna Choudhury
-* Faiza Abdul Salam
-* Abdul Ghani Zahid
-* Evelyn Onyi Anyebe
+- Meghna Choudhury
+- Faiza Abdul Salam
+- Abdul Ghani Zahid
+- Evelyn Onyi Anyebe
