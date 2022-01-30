@@ -95,13 +95,13 @@ other people don't accidentally duplicate your effort.
 When you are ready to add you fix to an issue to the project, push your branch to the repo and create a pull request to **[develop]** branch.
 
 *Here are possible questions:*
-- What's this PR for or do?
-- Where should the reviewer start?
-- How should this be manually tested?
-- Where's the postman documentation? If it's an API project.
-- Any background context you want to provide?
-- What are the relevant ticket(s)?
-- Screenshots of the design if it's available...
+* What's this PR for or do?
+* Where should the reviewer start?
+* How should this be manually tested?
+* Where's the documentation?
+* Any background context you want to provide?
+* What are the relevant ticket(s)?
+* Screenshots of the design if it's available...
 
 **Try to answer a least 4 of this questions in your pull requests**
 
