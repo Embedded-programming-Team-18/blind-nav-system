@@ -78,9 +78,9 @@ Issues can be submitted by any of the collaborators.
 
 [Issues in GitHub?](https://docs.github.com/en/issues/tracking-your-work-with-issues/about-issues)
 
-- To start working on this repo, check the issues tab and identify an issue to work on. 
-- Check the comment thread to see if there is somebody already working to fix the issue.
-- If no one is working on it, Leave a comment that you intend to work on the issue and assign yourself to it.
+* To start working on this repo, check the issues tab and identify an issue to work on. 
+* Check the comment thread to see if there is somebody already working to fix the issue.
+* If no one is working on it, Leave a comment that you intend to work on the issue and assign yourself to it.
 
 By doing this,
 other people don't accidentally duplicate your effort.
@@ -124,8 +124,8 @@ The reviewers should leave comments where necessary.
 
 ### Helpful Resources
 
-- [Pro GIT Book](https://git-scm.com/book/en/v2)
+* [Pro GIT Book](https://git-scm.com/book/en/v2)
 
-- [Try Git](https://try.github.io/)
+* [Try Git](https://try.github.io/)
 
-- [Git/ Git Hub on Windows](https://www.youtube.com/watch?v=J_Clau1bYco)
+* [Git/ Git Hub on Windows](https://www.youtube.com/watch?v=J_Clau1bYco)

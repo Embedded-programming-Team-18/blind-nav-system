@@ -46,10 +46,12 @@ Here a smart glove program is developed to tackle the navigation problem for bli
 ## Tech Requirements
 
 **Hardware requirements**
+```
     * Raspberry Pi 3
     * TFMini S LiDAR sensor
     * Servo motto controller with Arduino and 5 mottos
     * Logic Converter
+```    
 
 **Software dependencies/frameworks used**
 
@@ -86,10 +88,10 @@ Issues can be submitted by any of the collaborators.
 ## Credits
 
 **Contributors**
-    * [Meghna Choudhury](Megna)
-    * [Faiza Abdul Salam](Faiza)
-    * [Abdul Ghani Zahid](Abdul)
-    * [Evelyn Onyi Anyebe](Evelyn)
+* [Meghna Choudhury](Megna)
+* [Faiza Abdul Salam](Faiza)
+* [Abdul Ghani Zahid](Abdul)
+* [Evelyn Onyi Anyebe](Evelyn)
 
 
 ### Reference Links
