@@ -9,6 +9,10 @@ This project involves the development of an assistive smart glove using Light De
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Contributors](https://img.shields.io/github/contributors/EvelynAnyebe/blind-nav-system)](https://github.com/EvelynAnyebe/blind-nav-system)
 [![Open Issues](https://img.shields.io/github/issues-raw/EvelynAnyebe/blind-nav-system)](https://github.com/EvelynAnyebe/blind-nav-system/issues)
+[![Closed Issues](https://img.shields.io/github/issues-closed-raw/EvelynAnyebe/blind-nav-system)](https://github.com/EvelynAnyebe/blind-nav-system)
+[![PR](https://img.shields.io/github/issues-pr/EvelynAnyebe/blind-nav-system)](https://github.com/EvelynAnyebe/blind-nav-system)
+[![Milestones](https://img.shields.io/github/milestones/all/EvelynAnyebe/blind-nav-system)](https://github.com/EvelynAnyebe/blind-nav-system)
+[![Code Size](https://img.shields.io/github/languages/code-size/EvelynAnyebe/blind-nav-system)](https://github.com/EvelynAnyebe/blind-nav-system)
 
 ## Table of Contents
 
