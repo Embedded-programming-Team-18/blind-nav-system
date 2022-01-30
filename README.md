@@ -71,7 +71,7 @@ Here a smart glove program is developed to tackle the navigation problem for bli
   
 ## Contributing Guide
 
-[The contributing guide can be found here]()
+[The contributing guide can be found here](https://github.com/EvelynAnyebe/blind-nav-system/blob/gh-pages/CONTRIBUTING.md)
 
 'BLIND NAVIGATION SYSTEM' accepts PR's (pull requests) from **collaborators only**
 only.
@@ -86,7 +86,7 @@ Issues can be submitted by any of the collaborators.
     * [Faiza Abdul Salam](Faiza)
     * [Abdul Ghani Zahid](Abdul)
     * [Evelyn Onyi Anyebe](Evelyn)
-    
+
 
 ### Reference Links
 * [dfrobot.com](https://www.dfrobot.com/product-1702.html)
