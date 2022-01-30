@@ -32,15 +32,15 @@ This project involves the development of an assistive smart glove using Light De
 There are many assistive technologies that aid blind people navigate their enviroment. These can be in eye glasses, walking canes, helmets etc. However, the usefulness of these devices are still in debate mbecause they are usually combined with guide dogs and canes. 
 
 Here a smart glove program is developed to tackle the navigation problem for blind people so that they can be confident to move without a cane or guide dog. 
+``` 
+    **Why Smart Glove?**
+    1. Good for mobility as it is more compact.
 
-``` **Why Smart Glove?**
-1. Good for mobility as it is more compact.
+    2. Flexible for position of a person.
 
-2. Flexible for position of a person.
+    3. Ease of use than cane.
 
-3. Ease of use than cane.
-
-4. More range than the stick.
+    4. More range than the stick.
 ```
 
 ## Tech Requirements
@@ -82,7 +82,6 @@ Here a smart glove program is developed to tackle the navigation problem for bli
 
 ## Credits
 
-**Contributors**
 * [Meghna Choudhury](Megna)
 * [Faiza Abdul Salam](Faiza)
 * [Abdul Ghani Zahid](Abdul)
