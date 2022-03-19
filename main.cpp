@@ -1,5 +1,9 @@
 #include <iostream>
 
+using namespace std;
+
+
 int main(){
-    return 0;
+    cout << "Hello there!\n";
+    return 0
 }

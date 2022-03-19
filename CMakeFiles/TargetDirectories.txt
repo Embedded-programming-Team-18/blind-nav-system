@@ -1,0 +1,3 @@
+C:/Users/HP/dev/blind-nav-system/CMakeFiles/blind-navigation.dir
+C:/Users/HP/dev/blind-nav-system/CMakeFiles/ALL_BUILD.dir
+C:/Users/HP/dev/blind-nav-system/CMakeFiles/ZERO_CHECK.dir
