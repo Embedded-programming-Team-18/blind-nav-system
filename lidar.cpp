@@ -3,9 +3,14 @@
 class Lidar{
 
     public:
-        
         void Lidar::start(const char *serial_port) {
             if (nullptr != worker) return;
+
+            if (doInit) {
+                if (gpioInitialise() < 0) {
+                    throw "gpioInitialise failed";
+                }
+            }
 
             tty_fd = open(serial_port, O_RDWR); // Open in non blocking read/write mode
             if (tty_fd < 0)
@@ -37,14 +42,16 @@ class Lidar{
         unsigned int dist;
         //start servo
         while (Lidar->running) {
-             cout << "In loop\n";
+            cout << "In loop\n";
             int f1 = read(Lidar->tty_fd, &buf, 1);
             printf("Read %i bytes. Received message: %d", f1, buf[0]);
+            // Ask servo to move
             if (1==f1 &&
                 0x59==buf[0] &&
                 1==read(Lidar->tty_fd, buf+1, 1) &&
                 0x59==buf[1]) {
                     cout << "FIrst 2 header read\n";
+
                 // find the header 0xFA 0xA0
                 for (int idx=2; idx<9; idx++){
                     if (1!=read(Lidar->tty_fd, buf+idx, 1)) break;
@@ -54,12 +61,11 @@ class Lidar{
                 Lidar->LidarData[Lidar->angle]=dist;
                 cout << "Distance: "<< dist<<"\n";
                 
-                // Ask servo to the next angle 
             }else{
                 cout << "Incomplete header: ";
             }  
             
-        }//whil loop ends
+        }//while loop ends
 	
     }
 
