@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/Documents/blind-nav-system/Lidar.cpp
+lidar.h
+/home/pi/Documents/blind-nav-system/lidar.h
+
+/home/pi/Documents/blind-nav-system/lidar.h
+stdio.h
+-
+unistd.h
+-
+fcntl.h
+-
+termios.h
+-
+iostream
+-
+cstring
+-
+pigpio.h
+-
+thread
+-
+servo.h
+/home/pi/Documents/blind-nav-system/servo.h
+
+/home/pi/Documents/blind-nav-system/servo.h
+stdio.h
+-
+stdint.h
+-
+unistd.h
+-
+pigpio.h
+-
+

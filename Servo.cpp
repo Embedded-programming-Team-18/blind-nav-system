@@ -1,12 +1,20 @@
 #include "servo.h"
 
 class Servo{
+
     public:
-        void Servo::start(int startAngle, int endAngle){
-            this::startAngle=startAngle;
-            this::angle=startAngle;
-            this::endAngle=endAngle;
+        Servo(){
+            this::steps=0;
+            this::step=1000/90;
+            this::angle=1;
+            this::flag=1000;
         }
+        void Servo::start(ServoInit init){
+            this::startAngle=init.startAngle;
+            this::angle=init.startAngle;
+            this::endAngle=init.endAngle;
+        }
+
         int Servo::move(){
             // This function controls how the servo moves forward or backward
             if(flag==1000){
@@ -28,5 +36,6 @@ class Servo{
                 ++angle;
                 usleep(5000);
             }
+            return angle;
         }
-}
+};

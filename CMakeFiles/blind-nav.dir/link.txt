@@ -1,0 +1,1 @@
+/usr/bin/c++ -O2 -g -DNDEBUG CMakeFiles/blind-nav.dir/main.cpp.o -o blind-nav  liblidar.a -lpthread -lpigpio -lrt 

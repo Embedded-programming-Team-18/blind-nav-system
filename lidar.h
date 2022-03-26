@@ -8,19 +8,10 @@
 #include <iostream>
 #include <cstring>
 #include <pigpio.h>
+#include <thread>
+#include "servo.h"
 
 class Lidar{
-    
-    private:
-        int tty_fd= -1;
-        DataInterface* dataInterface = nullptr;
-        bool running = true;
-        int LidarData[nDistance];
-        int angle=0;
-        std::thread* worker = nullptr;
-        void run(Lidar* Lidar);
-        bool doInit = true;
-
     public:
 
         static const unsigned nDistance = 90;
@@ -50,6 +41,18 @@ class Lidar{
             dataInterface = di;
         }
 
-}
+    private:
+        int tty_fd= -1;
+        DataInterface* dataInterface = nullptr;
+        bool running = true;
+        int LidarData[nDistance];
+        int angle=0;
+        std::thread* worker = nullptr;
+        static void run(Lidar* Lidar);
+        bool doInit = true;
+        Servo servoMotto;
+        ServoInit servoAngle;
+
+};
 
 #endif

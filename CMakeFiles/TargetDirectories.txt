@@ -1,3 +1,8 @@
-C:/Users/HP/dev/blind-nav-system/CMakeFiles/blind-navigation.dir
-C:/Users/HP/dev/blind-nav-system/CMakeFiles/ALL_BUILD.dir
-C:/Users/HP/dev/blind-nav-system/CMakeFiles/ZERO_CHECK.dir
+/home/pi/Documents/blind-nav-system/CMakeFiles/install/strip.dir
+/home/pi/Documents/blind-nav-system/CMakeFiles/install.dir
+/home/pi/Documents/blind-nav-system/CMakeFiles/install/local.dir
+/home/pi/Documents/blind-nav-system/CMakeFiles/rebuild_cache.dir
+/home/pi/Documents/blind-nav-system/CMakeFiles/edit_cache.dir
+/home/pi/Documents/blind-nav-system/CMakeFiles/blind-nav.dir
+/home/pi/Documents/blind-nav-system/CMakeFiles/list_install_components.dir
+/home/pi/Documents/blind-nav-system/CMakeFiles/lidar.dir
