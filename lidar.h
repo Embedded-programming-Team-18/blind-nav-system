@@ -13,14 +13,22 @@
 
 class Lidar{
     public:
-
+        // This is the number of distances to obtain from the lidar. 
+        //It represents a complete scan
         static const unsigned nDistance = 90;
+        
+        // This stores all the data received in a complete scan
         int LidarData[nDistance];
 
         Lidar(bool _doInit = true) {
 		    doInit = _doInit;
 	    }
+
+        // This is a function to initialize variables/settings needed by the library.
+        // It has a serial port argument which is "/dev/ttyS0" by default
         void start(const char *serial_port = "/dev/ttyS0");
+        
+        // Stops the thread
         void stop();
         
         ~Lidar() {

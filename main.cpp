@@ -37,7 +37,7 @@ class DataInterface : public Lidar::DataInterface {
         }
 };
 
-int main(){
+int main(int, char **){
     Lidar lidar;
     DataInterface dataInterface;
     lidar.registerInterface(&dataInterface);

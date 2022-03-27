@@ -3,6 +3,7 @@
 void Lidar::start(const char *serial_port) {
     if (nullptr != worker) return;
 
+    // pgpio is initialized here
     if (doInit) {
         if (gpioInitialise() < 0) {
             throw "gpioInitialise failed";
@@ -30,40 +31,47 @@ void Lidar::start(const char *serial_port) {
     cfsetispeed(&tty_opt, B115200);
     tcsetattr(tty_fd, TCSANOW, &tty_opt);
     
+    // Create the thread which starts running
     worker = new std::thread(Lidar::run,this);
 }
 
 
 void Lidar::run(Lidar* Lidar) {
-unsigned char buf[9];
-unsigned int dist;
-//start servo
-Servo::start();
-while (Lidar->running) {
-    std::cout << "In loop\n";
-    int f1 = read(Lidar->tty_fd, &buf, 1);
-    std::cout << "Read" << f1 <<"bytes. Received message: " << buf[0];
-    if (1==f1 &&
-        0x59==buf[0] &&
-        1==read(Lidar->tty_fd, buf+1, 1) &&
-        0x59==buf[1]) {
-            std::cout << "FIrst 2 header read\n";
-
+    // This represent a single read
+    unsigned char buf[9];
+    // This variable hold the distance value from a single read
+    unsigned int dist;
+    // start servo
+    Servo::start();
+    // The thread keeps running
+    while (Lidar->running) {
+        std::cout << "In loop\n";
+        int f1 = read(Lidar->tty_fd, &buf, 1);
+        std::cout << "Read" << f1 <<"bytes. Received message: " << buf[0];
         // find the header 0xFA 0xA0
-        for (int idx=2; idx<9; idx++){
-            if (1!=read(Lidar->tty_fd, buf+idx, 1)) break;
-            //std::cout << "bytes: "<< idx<<" "<<buf[idx]<<"\n";
-        }
-        dist = buf[2]+(buf[3]*256);
-        Lidar->LidarData[Lidar->angle]=dist;
-        std::cout << "Distance: "<< dist<<"\n";
-        // Ask servo to move
+        if (1==f1 &&
+            0x59==buf[0] &&
+            1==read(Lidar->tty_fd, buf+1, 1) &&
+            0x59==buf[1]) {
+                std::cout << "FIrst 2 header read\n";
+
+            // read the remaining bytes from the serial port 
+            for (int idx=2; idx<9; idx++){
+                if (1!=read(Lidar->tty_fd, buf+idx, 1)) break;
+                //std::cout << "bytes: "<< idx<<" "<<buf[idx]<<"\n";
+            }
+
+            // Calculate the distance
+            dist = buf[2]+(buf[3]*256);
+            Lidar->LidarData[Lidar->angle]=dist;
+            std::cout << "Distance: "<< dist<<"\n";
+            // Ask servo to move
             Lidar->angle = Servo::move();
-    }else{
-        std::cout << "Incomplete header: ";
-    }  
-    
-}//while loop ends
+        }else{
+            std::cout << "Incomplete header: ";
+        }  
+        
+    }//while loop ends
 
 }
 
