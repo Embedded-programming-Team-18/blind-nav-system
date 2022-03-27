@@ -228,6 +228,60 @@ Lidar.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar.dir/build.make CMakeFiles/lidar.dir/Lidar.cpp.s
 .PHONY : Lidar.cpp.s
 
+Pwm.o: Pwm.cpp.o
+
+.PHONY : Pwm.o
+
+# target to build an object file
+Pwm.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar.dir/build.make CMakeFiles/lidar.dir/Pwm.cpp.o
+.PHONY : Pwm.cpp.o
+
+Pwm.i: Pwm.cpp.i
+
+.PHONY : Pwm.i
+
+# target to preprocess a source file
+Pwm.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar.dir/build.make CMakeFiles/lidar.dir/Pwm.cpp.i
+.PHONY : Pwm.cpp.i
+
+Pwm.s: Pwm.cpp.s
+
+.PHONY : Pwm.s
+
+# target to generate assembly for a file
+Pwm.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar.dir/build.make CMakeFiles/lidar.dir/Pwm.cpp.s
+.PHONY : Pwm.cpp.s
+
+Servo.o: Servo.cpp.o
+
+.PHONY : Servo.o
+
+# target to build an object file
+Servo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar.dir/build.make CMakeFiles/lidar.dir/Servo.cpp.o
+.PHONY : Servo.cpp.o
+
+Servo.i: Servo.cpp.i
+
+.PHONY : Servo.i
+
+# target to preprocess a source file
+Servo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar.dir/build.make CMakeFiles/lidar.dir/Servo.cpp.i
+.PHONY : Servo.cpp.i
+
+Servo.s: Servo.cpp.s
+
+.PHONY : Servo.s
+
+# target to generate assembly for a file
+Servo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lidar.dir/build.make CMakeFiles/lidar.dir/Servo.cpp.s
+.PHONY : Servo.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -272,6 +326,12 @@ help:
 	@echo "... Lidar.o"
 	@echo "... Lidar.i"
 	@echo "... Lidar.s"
+	@echo "... Pwm.o"
+	@echo "... Pwm.i"
+	@echo "... Pwm.s"
+	@echo "... Servo.o"
+	@echo "... Servo.i"
+	@echo "... Servo.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

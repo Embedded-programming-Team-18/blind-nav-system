@@ -12,8 +12,9 @@ add_compile_options(-Wall -Wconversion -Wextra -pedantic)
 
 find_package (Threads)
 
-set(LIBSRC Lidar.cpp)
-set(LIBINCLUDE lidar.h)
+set(LIBSRC Lidar.cpp Servo.cpp Pwm.cpp)
+set(LIBINCLUDE lidar.h servo.h pwm.h)
+
 
 add_library(lidar
   STATIC

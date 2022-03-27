@@ -9,13 +9,13 @@
 
 class Pwm{
     private:
-        const int[] LED=[27,22,6,13,19];
+        const int LED [5]={27,22,6,13,19};
         const int RX=15;
         const int TX=14;
-        const maxDist = 420;
+        const int maxDist = 420;
 
     public:
-        void sendPwm(int minDist);
-}
+        void sendPwm(int *minDist);
+};
 
 #endif

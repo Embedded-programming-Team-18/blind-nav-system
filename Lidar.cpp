@@ -13,12 +13,8 @@ void Lidar::start(const char *serial_port) {
     if (tty_fd < 0)
     {
     // ERROR - CAN'T OPEN SERIAL PORT
-    printf("Error - Unable to open serial port.\n");
+    std::cout <<"Error - Unable to open serial port.\n";
     }
-
-    // set servo angles
-    servoAngle.startAngle=0;
-    servoAngle.endAngle=90;
 
     // CONFIGURE THE UART
     struct termios tty_opt;
@@ -42,11 +38,11 @@ void Lidar::run(Lidar* Lidar) {
 unsigned char buf[9];
 unsigned int dist;
 //start servo
-servoMotto.start(servoAngle);
+Servo::start();
 while (Lidar->running) {
     std::cout << "In loop\n";
     int f1 = read(Lidar->tty_fd, &buf, 1);
-    printf("Read %i bytes. Received message: %d", f1, buf[0]);
+    std::cout << "Read" << f1 <<"bytes. Received message: " << buf[0];
     if (1==f1 &&
         0x59==buf[0] &&
         1==read(Lidar->tty_fd, buf+1, 1) &&
@@ -62,7 +58,7 @@ while (Lidar->running) {
         Lidar->LidarData[Lidar->angle]=dist;
         std::cout << "Distance: "<< dist<<"\n";
         // Ask servo to move
-            Lidar->angle = servoMotto.move();
+            Lidar->angle = Servo::move();
     }else{
         std::cout << "Incomplete header: ";
     }  

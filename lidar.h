@@ -15,6 +15,7 @@ class Lidar{
     public:
 
         static const unsigned nDistance = 90;
+        int LidarData[nDistance];
 
         Lidar(bool _doInit = true) {
 		    doInit = _doInit;
@@ -45,14 +46,10 @@ class Lidar{
         int tty_fd= -1;
         DataInterface* dataInterface = nullptr;
         bool running = true;
-        int LidarData[nDistance];
         int angle=0;
         std::thread* worker = nullptr;
         static void run(Lidar* Lidar);
         bool doInit = true;
-        Servo servoMotto;
-        ServoInit servoAngle;
-
 };
 
 #endif

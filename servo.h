@@ -6,23 +6,17 @@
 #include <unistd.h>
 #include <pigpio.h>
 
-struct ServoInit{
-        int startAngle;
-        int endAngle;
-    };
-
 class Servo{
     private:
         static int steps;
         static int step;
-        static int startDirection;
+        static int startAngle;
         static int angle;
         static int flag;
-        static int endDirection;
+        static int endAngle;
 
     public:
-        Servo();
-        static void start(ServoInit init);
+        static void start();
         static int move();
 };
 
