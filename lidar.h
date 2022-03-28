@@ -9,6 +9,7 @@
 #include <cstring>
 #include <pigpio.h>
 #include <thread>
+#include <mutex>
 #include "servo.h"
 
 class Lidar{
@@ -58,6 +59,7 @@ class Lidar{
         std::thread* worker = nullptr;
         static void run(Lidar* Lidar);
         bool doInit = true;
+        std::mutex readoutMtx;
 };
 
 #endif
