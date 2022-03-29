@@ -7,7 +7,7 @@ bin-release/
 
 # Other files and folders
 .settings/
-/CMakeFiles
+CMakeFiles/
 
 # Executables
 *.swf
@@ -16,7 +16,8 @@ bin-release/
 *.apk
 *.cmake
 
-./CmakeCache.txt
+cmake_install.cmake
+.CMakeCache.txt
 
 # Project files, i.e. `.project`, `.actionScriptProperties` and `.flexProperties`
 # should NOT be excluded as they contain compiler settings and other important
