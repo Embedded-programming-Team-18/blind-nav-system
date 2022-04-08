@@ -31,7 +31,6 @@ void Pwm::sendPwm(Pwm* Pwm){
             pinPWM = (Pwm->thresholdMaxDist-distance)*255/Pwm->thresholdMaxDist;
             gpioPWM(Pwm->LED[i],pinPWM);
         }   
-        //std::cout << "pinPWM "<<pinPWM<<"\n";
     }
     
 }
