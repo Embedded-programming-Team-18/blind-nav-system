@@ -62,6 +62,8 @@ The servo motto board was coupled by the team and LEDs were used during the deve
 
 ## Software Development
 
+![C++ Icon](https://res.cloudinary.com/dxsty3st6/image/upload/v1649395304/blind-nav-system/c_-48_mbi1wr.png)
+
 This work followed Agile development approach. The various stages of the development process are outlined in order for simplicity.
 
 **Requirement Analysis**
