@@ -62,6 +62,8 @@ The servo motto board was coupled by the team and LEDs were used during the deve
 
 ## Software Development
 
+This work followed Agile development approach. The various stages of the development process are outlined in order for simplicity.
+
 **Requirement Analysis**
 
 ```
