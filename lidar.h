@@ -55,7 +55,6 @@ class Lidar{
         int tty_fd= -1;
         DataInterface* dataInterface = nullptr;
         bool running = true;
-        int angle=0;
         std::thread* worker = nullptr;
         static void run(Lidar* Lidar);
         bool doInit = true;

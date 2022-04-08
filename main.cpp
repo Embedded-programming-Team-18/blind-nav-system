@@ -10,12 +10,12 @@ class DataInterface : public Lidar::DataInterface {
         int size=5;
         int minDist[5];
         bool pwmFlag = false;
-        std::mutex readoutMtx;
         Pwm pwm4Leds;
     public:
         void newScanAvail(int (&data)[Lidar::nDistance]) {
             int splitLength = Lidar::nDistance/size;
             int minValue = data[0];
+            std::mutex readoutMtx;
             // This outer loop sets the 5 minDistance that we want.
             for(int i=0; i<size;i++){
                 // The min value will start at i*18 which represents the 5 splits
