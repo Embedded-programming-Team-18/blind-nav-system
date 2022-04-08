@@ -127,7 +127,7 @@ The usage of this work depends on your use case. In this repository, the Lidar l
 
 Find out more about the work on the following social media platforms.
 
-- [twitter](https://twitter.com/BlindNav)
+- ![twitter](https://res.cloudinary.com/dxsty3st6/image/upload/v1649395859/blind-nav-system/icons8-twitter-48_pt4icz.png)[twitter](https://twitter.com/BlindNav)
 - [instagram](https://www.instagram.com/blindnavsystem/)
 - [Youtube](https://www.youtube.com/channel/UC3s1xHjyCuRFFpUrwtq7xhg)
 
