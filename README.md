@@ -89,6 +89,7 @@ This work followed Agile development approach. The various stages of the develop
 ## Installation
 
 **Downloading from GitHub**
+
 The following steps serve as a guide for installation after Pi image is installed and hardware is built/coupled.
 
 1. To use this Library, the following needs to be installed on your Pi.
