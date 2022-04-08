@@ -1,8 +1,6 @@
-![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/v1643001489/blind-nav-system/smart_glove_3_pxaxcr.jpg)
-
 # Navigation System for Blind People - `Smart Glove`
 
-This project involves the development of an assistive smart glove using Light Detection and Ranging(LiDAR) technology and Raspbery pi to help individuals who are blind or with low vision to navigate with confidence.
+This project involves the development of an assistive smart glove using Light Detection and Ranging(LiDAR) technology and `Raspbery pi` to help individuals who are blind or with low vision to navigate with confidence. It contributes a `C++ library for TFMini s sensor` and use it in the development the hand glove.
 
 ## Status
 
@@ -32,6 +30,8 @@ This project involves the development of an assistive smart glove using Light De
 There are many assistive technologies that aid blind people navigate their enviroment. These can be in eye glasses, walking canes, helmets etc. However, the usefulness of these devices are still in debate mbecause they are usually combined with guide dogs and canes.
 
 Here a smart glove program is developed to tackle the navigation problem for blind people so that they can be confident to move without a cane or guide dog. [Find out more on our GitHub page here](https://embedded-programming-team-18.github.io/blind-nav-system/)
+
+![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/v1643001489/blind-nav-system/smart_glove_3_pxaxcr.jpg)
 
 ```
     **Why Smart Glove?**
