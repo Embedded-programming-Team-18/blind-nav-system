@@ -71,7 +71,9 @@ This work followed Agile development approach. The various stages of the develop
 
     * According to the map, distance of the obstacles is calculated and returned.
 
-    * Using that feedback, PWM is sent to a finger. Depending on the level of vibration on the fingers, the person gets an idea of where the obstacle is located, and he can go left or right.
+    * Using that feedback, PWM is sent to a finger.
+      Depending on the level of vibration on the fingers,
+      the person gets an idea of where the obstacle is located, and he can go left or right.
 ```
 
 **Software Design**
