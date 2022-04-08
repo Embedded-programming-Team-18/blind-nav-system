@@ -46,6 +46,8 @@ Here a smart glove program is developed to tackle the navigation problem for bli
 
 ## Hardware Requirements
 
+![raspberry pi](https://res.cloudinary.com/dxsty3st6/image/upload/v1649396693/blind-nav-system/icons8-raspberry-pi-48_wvkoak.png)
+
 The main componenents used for this project are:
 
 ```
