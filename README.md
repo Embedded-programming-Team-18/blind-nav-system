@@ -125,10 +125,9 @@ The usage of this work depends on your use case. In this repository, the Lidar l
 
 ## Social Media
 
-![twitter](https://res.cloudinary.com/dxsty3st6/image/upload/v1649395859/blind-nav-system/icons8-twitter-48_pt4icz.png)
-Find out more about the work on the following social media platforms.
+![twitter](https://res.cloudinary.com/dxsty3st6/image/upload/v1649395859/blind-nav-system/icons8-twitter-48_pt4icz.png) ![instagram](https://res.cloudinary.com/dxsty3st6/image/upload/v1649395859/blind-nav-system/icons8-instagram-48_k5kuwi.png) ![youtube](https://res.cloudinary.com/dxsty3st6/image/upload/v1649395859/blind-nav-system/icons8-youtube-48_kpall9.png)
 
-- [twitter](https://twitter.com/BlindNav) [instagram](https://www.instagram.com/blindnavsystem/) [Youtube](https://www.youtube.com/channel/UC3s1xHjyCuRFFpUrwtq7xhg)
+Find out more about the work on the following social media platforms [twitter](https://twitter.com/BlindNav) [instagram](https://www.instagram.com/blindnavsystem/) and [Youtube](https://www.youtube.com/channel/UC3s1xHjyCuRFFpUrwtq7xhg)
 
 ## Credits
 
