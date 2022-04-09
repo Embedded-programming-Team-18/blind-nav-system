@@ -10,7 +10,7 @@
 
 class Servo{
     private:
-        static int steps;
+        //static int steps;
         static int step;
         static int startAngle;
         static int angle;
