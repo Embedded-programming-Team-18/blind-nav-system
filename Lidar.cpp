@@ -44,7 +44,6 @@ void Lidar::run(Lidar* Lidar) {
     // This variable hold the distance value from a single read
     unsigned int dist;
     bool dataAvailable = true;
-    int angle=0;
     // start servo
     Servo::start();
     // The thread keeps running
@@ -64,17 +63,16 @@ void Lidar::run(Lidar* Lidar) {
 
             // Calculate the distance
             dist = buf[2]+(buf[3]*256);
-            Lidar->LidarData[angle]=dist;
-            std::cout << "Distance: "<< Lidar->LidarData[angle]<<" Angle: "<< angle <<"\n"; 
+            Lidar->readoutMtx.lock();
+                Lidar->LidarData[Lidar->angle]=dist;
+            Lidar->readoutMtx.unlock();
+            std::cout << "Distance: "<< Lidar->LidarData[Lidar->angle]<<" Angle: "<< Lidar->angle <<"\n"; 
+            // Ask servo to move
+            Lidar->angle= Servo::move(); 
             if (dataAvailable && nullptr!= Lidar->dataInterface){
                 Lidar->dataInterface->newScanAvail(Lidar->LidarData);
             }
-
-            Lidar->readoutMtx.lock();
-                // Ask servo to move
-                angle = Servo::move();
-            Lidar->readoutMtx.unlock(); 
-
+            
         }else{
             std::cout << "Incomplete header: ";
             //usleep(500000);

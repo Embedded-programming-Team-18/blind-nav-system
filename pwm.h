@@ -12,8 +12,8 @@ class Pwm{
         const int LED [5]={27,22,6,13,19};
         const int RX=15;
         const int TX=14;
-        const int thresholdMaxDist = 450;
-        const int thresholdMinDist = 90; 
+        const int thresholdMaxDist = 100;
+        const int thresholdMinDist = 0; 
         std::thread* pwmWorker = nullptr;
         int* minDist;
         bool doInit = true;

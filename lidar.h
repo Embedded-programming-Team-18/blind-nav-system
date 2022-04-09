@@ -59,6 +59,7 @@ class Lidar{
         static void run(Lidar* Lidar);
         bool doInit = true;
         std::mutex readoutMtx;
+        int angle = 0;
 };
 
 #endif

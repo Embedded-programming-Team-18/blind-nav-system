@@ -22,6 +22,7 @@ void Pwm::sendPwm(Pwm* Pwm){
     while(Pwm->running){
 
         for(int i=0; i<5; i++){
+            //std::cout<<"Mindist: "<<Pwm->minDist[i]<<" i: "<<i<<std::endl;
             distance = Pwm->minDist[i];
             if(distance>Pwm->thresholdMaxDist){
                 distance = Pwm->thresholdMaxDist;
