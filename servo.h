@@ -16,7 +16,7 @@
 /**
 * @brief The servo class is tighly coupled with the lidar to perform a full scan of 90 packets (90 degrees field of view)
 *
-* This class manages the servo motto by moving it in the right direction when asked to move.
+* This class manages the servo motor by moving it in the right direction when asked to move.
 * It has one class method move which gets called.  
 */
 class Servo{
@@ -28,7 +28,12 @@ class Servo{
         int endAngle;
 
     public:
-        Servo(){
+    /**
+        * This method has different variables to help us set the step size, start and end angles and flags to develop our code.
+        *
+    **/
+        Servo()
+        {
             step=1000/90;
             angle=0;
             startAngle=0;

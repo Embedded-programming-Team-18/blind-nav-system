@@ -10,10 +10,9 @@
 * The driver is implemented to guide a user through vibratic signals sent as pwm to gpio pins.
 * 
 * 
-* Find out more about the work on the following platforms:
-* - [GitHub](https://github.com/Embedded-programming-Team-18/blind-nav-system)
-* - [twitter](https://twitter.com/BlindNav)
-* - [instagram](https://www.instagram.com/blindnavsystem/)
+* Find out more about the work on the following social media platforms:
+* - [Twitter](https://twitter.com/BlindNav)
+* - [Instagram](https://www.instagram.com/blindnavsystem/)
 * - [Youtube](https://www.youtube.com/channel/UC3s1xHjyCuRFFpUrwtq7xhg)
 *
 * @section Usage How to use
