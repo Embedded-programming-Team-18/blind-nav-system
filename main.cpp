@@ -5,6 +5,17 @@
 
 using namespace std;
 
+/**
+* 
+* @section DESCRIPTION
+* This class represents the data interface that is required to retrieve data from the Lidar Driver. 
+*/ 
+/**
+* @brief A data interface class that implements the new newScanAvail(...) of the Lidar driver
+*
+* This class accesses the data read by the lidar after a full scan and sends pwm to the appropriate 
+* gpio pin
+*/
 class DataInterface : public Lidar::DataInterface {
     private:
         int size=5;
@@ -15,6 +26,10 @@ class DataInterface : public Lidar::DataInterface {
         int gpioFlag = true;
         Pwm pwmObj;
     public:
+        /**
+        * Callback method implemented in the data interface class
+        * @param data int array
+        */
         void newScanAvail(int (&data)[Lidar::nDistance]) {
             if(gpioFlag){
                 for(int i=0; i<5; i++){
@@ -47,6 +62,9 @@ class DataInterface : public Lidar::DataInterface {
         }
 };
 
+/**
+* Main method for program entry
+*/
 int main(int, char **){
     Lidar lidar;
     DataInterface dataInterface;
