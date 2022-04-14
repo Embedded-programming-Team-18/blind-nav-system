@@ -20,10 +20,8 @@
 *
 *   1. To use this Library, the following needs to be installed on your Pi.
 *
-*   ```
-*        * PIGPIO: [this can be found here](https://abyz.me.uk/rpi/pigpio/download.html)
+*        * PIGPIO
 *        * CMake
-*    ```
 *
 *    2. Enable Serioal port for `UART` on your Pi.
 *    3. To compile and build the code after downloading from GitHub,
