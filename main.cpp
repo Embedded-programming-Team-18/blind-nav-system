@@ -16,7 +16,7 @@
 * - [Youtube](https://www.youtube.com/channel/UC3s1xHjyCuRFFpUrwtq7xhg)
 *
 * @section Usage How to use
-*    The following steps serve as a guide for installation after Pi image is installed and hardware is built/coupled.
+* The following steps serve as a guide for installation after Pi image is installed and hardware is built/coupled.
 *
 *   1. To use this Library, the following needs to be installed on your Pi.
 *
