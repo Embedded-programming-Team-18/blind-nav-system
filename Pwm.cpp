@@ -1,37 +1,11 @@
 #include "pwm.h"
-
-void Pwm::start(int *dist){
-    if (nullptr != pwmWorker) return;
-     minDist = dist;
-
-    // pgpio is initialized here
-    if (gpioInitialise() < 0) {
-        throw "gpioInitialise failed";
+void Pwm::sendPwm(int gpioPin,int distance){
+    if(distance>thresholdMaxDist){
+        distance = thresholdMaxDist;
+    }else if(minValue<thresholdMinDist){
+        distance=0;
     }
-
-    for(int i=0; i<5; i++){
-        gpioSetMode(LED[i],PI_OUTPUT);
-    }
-    // Create the thread which starts running
-    pwmWorker = new std::thread(Pwm::sendPwm,this);
-}
-
-void Pwm::sendPwm(Pwm* Pwm){
-    int pinPWM = 0;
-    int distance =0;
-    while(Pwm->running){
-
-        for(int i=0; i<5; i++){
-            distance = Pwm->minDist[i];
-            if(distance>Pwm->thresholdMaxDist){
-                distance = Pwm->thresholdMaxDist;
-            }else if(distance<Pwm->thresholdMinDist){
-                distance=0;
-            }
-            pinPWM = (Pwm->thresholdMaxDist-distance)*255/Pwm->thresholdMaxDist;
-            gpioPWM(Pwm->LED[i],pinPWM);
-        }   
-        //std::cout << "pinPWM "<<pinPWM<<"\n";
-    }
-    
+    pinPWM = (thresholdMaxDist-distance)*255/thresholdMaxDist;
+    //std::cout<<"Min "<<minValue<<", Pwm "<<i<<": "<<pinPWM<<std::endl;
+    gpioPWM(gpioPin,pinPWM);
 }
