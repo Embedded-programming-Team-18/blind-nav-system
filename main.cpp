@@ -3,7 +3,14 @@
 #include "pwm.h"
 #include <mutex>
 
-using namespace std;
+/** @mainpage A Brief Introduction to Blind Navigation System
+* @section intro_sec Introduction
+*
+* This work contains a LiDAR driver for obstacle detection.
+* The driver is implemented to guide a user through vibratic signals sent as pwm to gpio pins.
+* 
+*
+*/
 
 /**
 * 
@@ -62,9 +69,6 @@ class DataInterface : public Lidar::DataInterface {
         }
 };
 
-/**
-* Main method for program entry
-*/
 int main(int, char **){
     Lidar lidar;
     DataInterface dataInterface;
