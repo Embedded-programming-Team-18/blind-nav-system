@@ -3,11 +3,21 @@
 
 #include <stdio.h>
 #include <stdint.h>
-//#include <unistd.h>
 #include <pigpio.h>
 #include <iostream>
 #include <mutex>
 
+
+/**
+* 
+* @section DESCRIPTION
+* This class represent the servo motor class. 
+*/ 
+/**
+* @brief The servo class is tighly coupled with the lidar to perform a full scan of 90 packets (90 degrees field of view)
+*
+* This class   
+*/
 class Servo{
     private:
         int step;

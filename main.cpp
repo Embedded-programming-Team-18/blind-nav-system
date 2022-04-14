@@ -9,7 +9,29 @@
 * This work contains a LiDAR driver for obstacle detection.
 * The driver is implemented to guide a user through vibratic signals sent as pwm to gpio pins.
 * 
+* 
+* Find out more about the work on the following social media platforms:
+* - [twitter](https://twitter.com/BlindNav)
+* - [instagram](https://www.instagram.com/blindnavsystem/)
+* - [Youtube](https://www.youtube.com/channel/UC3s1xHjyCuRFFpUrwtq7xhg)
 *
+* @section Usage How to use
+*    The following steps serve as a guide for installation after Pi image is installed and hardware is built/coupled.
+*
+*   1. To use this Library, the following needs to be installed on your Pi.
+*
+*   ```
+*        * PIGPIO: [this can be found here](https://abyz.me.uk/rpi/pigpio/download.html)
+*        * CMake
+*    ```
+*
+*    2. Enable Serioal port for `UART` on your Pi.
+*    3. To compile and build the code after downloading from GitHub,
+*    ```
+*       * Cmake .
+*        * Make
+*    ```
+*    4. ./blind-nav executable will be created.
 */
 
 /**
