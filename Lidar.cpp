@@ -41,15 +41,13 @@ void Lidar::start(const char *serial_port) {
 void Lidar::run(Lidar* Lidar) {
     // This represent a single read
     unsigned char buf[9];
+
     // This variable hold the distance value from a single read
-    unsigned int dist;
-    bool dataAvailable = true;
-    // start servo
-    Servo::start();
+    //unsigned int dist;
+    
     // The thread keeps running
     while (Lidar->running) {
         int f1 = read(Lidar->tty_fd, &buf, 1);
-        //std::cout << "Read" << f1 <<"bytes. Received message: " << buf[0];
         // find the header 0xFA 0xA0
         if (1==f1 &&
             0x59==buf[0] &&
@@ -58,24 +56,19 @@ void Lidar::run(Lidar* Lidar) {
             // read the remaining bytes from the serial port 
             for (int idx=2; idx<9; idx++){
                 if (1!=read(Lidar->tty_fd, buf+idx, 1)) break;
-                //std::cout << "bytes: "<< idx<<" "<<buf[idx]<<"\n";
             }
-
-            // Calculate the distance
-            dist = buf[2]+(buf[3]*256);
             Lidar->readoutMtx.lock();
-                Lidar->LidarData[Lidar->angle]=dist;
+                Lidar->LidarData[Lidar->angle]=buf[2]+(buf[3]*256);
+                //std::cout << "Distance: "<< Lidar->LidarData[Lidar->angle]<<" Angle: "<< Lidar->angle <<"\n"; 
+                // Ask servo to move
+                Lidar->angle= Lidar->lidarServo.move();
             Lidar->readoutMtx.unlock();
-            std::cout << "Distance: "<< Lidar->LidarData[Lidar->angle]<<" Angle: "<< Lidar->angle <<"\n"; 
-            // Ask servo to move
-            Lidar->angle= Servo::move(); 
-            if (dataAvailable && nullptr!= Lidar->dataInterface){
+            if (Lidar->angle>=89 && nullptr!= Lidar->dataInterface){
                 Lidar->dataInterface->newScanAvail(Lidar->LidarData);
             }
-            
+            //std::this_thread::sleep_for(std::chrono::milliseconds(10));
         }else{
             std::cout << "Incomplete header: ";
-            //usleep(500000);
         }  
         
     }//while loop ends

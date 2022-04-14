@@ -8,38 +8,40 @@ using namespace std;
 class DataInterface : public Lidar::DataInterface {
     private:
         int size=5;
-        int minDist[5];
-        bool pwmFlag = false;
-        Pwm pwm4Leds;
+        const int LED [5]={16,27,22,6,13,19};
+        const int thresholdMaxDist = 100;
+        const int thresholdMinDist = 0;
+        std::mutex dataoutMtx;
+        int gpioFlag = true;
+        Pwm pwmObj;
     public:
         void newScanAvail(int (&data)[Lidar::nDistance]) {
+            if(gpioFlag){
+                for(int i=0; i<5; i++){
+                    gpioSetMode(LED[i],PI_OUTPUT);
+                }
+                gpioFlag =0;    
+            }
             int splitLength = Lidar::nDistance/size;
-            int minValue = data[0];
-            std::mutex readoutMtx;
+            int minValue=0;
+            int splitStart=0;
+            int pinPWM=0;
+            dataoutMtx.lock();
+            //Obstacle signal
+            pwmObj.sendPwm(LED[0],data[0])
             // This outer loop sets the 5 minDistance that we want.
             for(int i=0; i<size;i++){
                 // The min value will start at i*18 which represents the 5 splits
-                minValue = data[i*splitLength];
-                int k = 0;
+                splitStart = i*splitLength+1;
+                minValue = data[splitStart];
                 // This inner loop iterate through each split to find the minValue
-                for(int j=0; j<splitLength; j++){
-                    k=i*splitLength + j;
-                    if(minValue>data[k]) {
-                        minValue=data[k];
+                for(int j=1; j<splitLength; j++){
+                    if(minValue>data[splitStart + j]) {
+                        minValue=data[splitStart + j];
                     }
                 }
-                readoutMtx.lock();
-                 minDist[i]=minValue;
-                readoutMtx.unlock();
-            }
-            //for(int g=0; g<5; g++) std::cout << "MinDist "<<g<<" "<<minDist[g]<<"\n";
-            //std::cout<<pwmFlag<<std::endl;
-            if(pwmFlag == false){
-                // std::cout<<"Call back"<<"\n";
-                // Send pwm to the 5 LED here
-                pwm4Leds.start(minDist);
-                pwmFlag=true;
-            
+                pwmObj.sendPwm(LED[i+1],minValue)
+                dataoutMtx.unlock();
             }
             
         }

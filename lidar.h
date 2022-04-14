@@ -10,13 +10,14 @@
 #include <pigpio.h>
 #include <thread>
 #include <mutex>
+#include <chrono>
 #include "servo.h"
 
 class Lidar{
     public:
         // This is the number of distances to obtain from the lidar. 
-        //It represents a complete scan
-        static const unsigned nDistance = 90;
+        //It represents a complete scan (the obstacle scan + 90 scan degree field of view)
+        static const unsigned nDistance = 91;
         
         // This stores all the data received in a complete scan
         int LidarData[nDistance];
@@ -60,6 +61,7 @@ class Lidar{
         bool doInit = true;
         std::mutex readoutMtx;
         int angle = 0;
+        Servo lidarServo;
 };
 
 #endif

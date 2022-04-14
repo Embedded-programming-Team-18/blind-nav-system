@@ -10,16 +10,21 @@
 
 class Servo{
     private:
-        //static int steps;
-        static int step;
-        static int startAngle;
-        static int angle;
-        static int flag;
-        static int endAngle;
+        int step;
+        int startAngle;
+        int angle;
+        int flag;
+        int endAngle;
 
     public:
-        static void start();
-        static int move();
+        Servo(){
+            step=1000/90;
+            angle=0;
+            //flag=1000;
+            startAngle=0;
+            endAngle=90;
+        }
+        int move();
 };
 
 #endif
