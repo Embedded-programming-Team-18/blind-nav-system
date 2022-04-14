@@ -16,7 +16,8 @@
 /**
 * @brief The servo class is tighly coupled with the lidar to perform a full scan of 90 packets (90 degrees field of view)
 *
-* This class   
+* This class manages the servo motto by moving it in the right direction when asked to move.
+* It has one class method move which gets called.  
 */
 class Servo{
     private:
@@ -30,7 +31,6 @@ class Servo{
         Servo(){
             step=1000/90;
             angle=0;
-            //flag=1000;
             startAngle=0;
             endAngle=90;
         }
