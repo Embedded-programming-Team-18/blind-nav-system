@@ -130,7 +130,7 @@ Test cases are available
 
 This work is documented here for quick start. You can also check:
 
-- Doxygen documentation [available here]().
+- Doxygen documentation [available here](https://embedded-programming-team-18.github.io/doxygen/index.html).
 - [the page](https://embedded-programming-team-18.github.io/blind-nav-system/)
 
 ## Installation
