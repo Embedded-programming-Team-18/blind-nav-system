@@ -90,10 +90,10 @@ In this section an overview of the software design is shown through use case dia
 
 - Use cases
 
-      ![use cases for the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/use-case-diagram_oogzft.jpg)
+  ![use cases for the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/use-case-diagram_oogzft.jpg)
 
-      In this work, a blind navigation system as a smart glove is demonstrated with the LiDAR driver.
-      The driver can be used for other use cases as well.
+  In this work, a blind navigation system as a smart glove is demonstrated with the LiDAR driver.
+  The driver can be used for other use cases as well.
 
 - State Diagrams
 - Class Diagrams
