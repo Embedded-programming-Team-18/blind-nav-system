@@ -80,7 +80,24 @@ This work followed Agile development approach. The various stages of the develop
       the person gets an idea of where the obstacle is located, and he can go left or right.
 ```
 
+![Image of the lidar full scan split](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/field-of-view-split-in-5_vsp8rx.jpg)
+
+A full scan of the LiDAR (90 degrees) split into 5 directions to guide the user. This is implemented in `main.cpp` where the driver is used
+
 **Software Design**
+
+In this section an overview of the software design is shown through use case diagrams, state diagrams, sequence diagrams.
+
+- Use cases
+
+      ![use cases for the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/use-case-diagram_oogzft.jpg)
+
+      In this work, a blind navigation system as a smart glove is demonstrated with the LiDAR driver.
+      The driver can be used for other use cases as well.
+
+- State Diagrams
+- Class Diagrams
+- Sequence Diagrams
 
 **Development**
 
@@ -100,17 +117,23 @@ The following steps serve as a guide for installation after Pi image is installe
 
 1. To use this Library, the following needs to be installed on your Pi.
 
-   ```
+```
+
        * PIGPIO: [this can be found here](https://abyz.me.uk/rpi/pigpio/download.html)
        * CMake
-   ```
+
+```
 
 2. Enable Serioal port for `UART` on your Pi.
 3. To compile and build the code after downloading from GitHub,
-   ```
+
+```
+
        * Cmake .
        * Make
-   ```
+
+```
+
 4. ./blind-nav executable will be created.
 
 **Installing the library**
@@ -146,5 +169,9 @@ Find out more about the work on the following social media platforms:
 
 - [dfrobot.com](https://www.dfrobot.com/product-1702.html)
 - [README FILE-Everything you need to know](https://www.mygreatlearning.com/blog/readme-file/)
-- [Lidar code on GitHub](https://github.com/berndporr/neato-xv11-lidar)
+- [berndporr/neato-xv11-lidar](https://github.com/berndporr/neato-xv11-lidar)
 - [pigpio](https://abyz.me.uk/rpi/pigpio)
+
+```
+
+```
