@@ -7,28 +7,31 @@
 #include <thread>
 
 
+/**
+* 
+* @section DESCRIPTION
+* This class abstracts the function of sending pwm from the data inteface class. 
+*/ 
+/**
+* @brief The pwm class that send pwm to the gpio pins
+*
+* This class sends pwm to the to the gpio pins sent to it.
+* It uses a double threshold: thresholdMinDist,thresholdMaxDist constant integers
+* to serve as maximum and minmum distances at which pwm will be sent.  
+*/
 class Pwm{
     private:
-        const int LED [5]={27,22,6,13,19};
-        const int RX=15;
-        const int TX=14;
-        const int thresholdMaxDist = 450;
-        const int thresholdMinDist = 90; 
-        std::thread* pwmWorker = nullptr;
-        int* minDist;
-        bool doInit = true;
-        bool running = true;
+        const int thresholdMaxDist = 100;
+        const int thresholdMinDist = 0; 
     public:
-        Pwm(bool _doInit = true) {
-		    doInit = _doInit;
-	    }
-
-         ~Pwm() {
-		    gpioTerminate();
-	    }
-
-        void start(int *minDist);
-        static void sendPwm(Pwm* Pwm);
+        /**
+        * This method calculates the pwm from the distance param 
+        * and sends it to the gpio pin it receives as argument.
+        *
+        * @param gpioPin int
+        * @param distance int
+        */
+        void sendPwm(int gpioPin,int distance);
 };
 
 #endif
