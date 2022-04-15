@@ -14,30 +14,47 @@ void Servo::start(){
         flag=1000;
         // set servo angles
         startAngle=0;
-        endAngle=0;
+        endAngle=89;
 }
 
 int Servo::move(){
+    std::mutex readoutMtx;
+    int currentAngle = 0;
     // This function controls how the servo moves forward or backward
+    // The forward part
     if(flag==1000){
-        if(angle>=endAngle){
+        if(angle<endAngle){
+            //To move forward
+            gpioServo(12,1000+(step*angle));
+            ++angle;
+            readoutMtx.lock();
+                currentAngle = angle;
+            readoutMtx.unlock();
+        }else{
             angle=startAngle;
             flag=2000;
+            readoutMtx.lock();
+                currentAngle = endAngle-angle;
+            readoutMtx.unlock();
         }
-        //To move forward
-        gpioServo(12,1000+(step*angle));
-        ++angle;
-        usleep(5000);
     }else if(flag==2000){
-        if(angle>=endAngle){
+        // The backward part
+        if(angle<endAngle){
+            // To move backward
+            gpioServo(12,2000-(step*angle));
+                ++angle;
+            readoutMtx.lock();
+                currentAngle = angle;
+            readoutMtx.unlock();  
+        }else{
             angle=startAngle;
             flag=1000;
+            readoutMtx.lock();
+                currentAngle = angle;
+            readoutMtx.unlock();
         }
-        // To move backward
-        gpioServo(12,2000-(step*angle));
-        ++angle;
-        usleep(5000);
     }
-    return angle;
+    
+    return currentAngle;
 }
 
