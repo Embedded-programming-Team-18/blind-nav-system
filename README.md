@@ -90,13 +90,25 @@ In this section an overview of the software design is shown through use case dia
 
 - Use cases
 
-  ![use cases for the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/use-case-diagram_oogzft.jpg)
+  ![smart glove use case of the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1650001317/blind-nav-system/blind-man-use-case_v94lsr.jpg)
 
   In this work, a blind navigation system as a smart glove is demonstrated with the LiDAR driver.
   The driver can be used for other use cases as well.
 
+  ![A mobile robot use case of the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1650001331/blind-nav-system/robot-use-case_c97yjf.jpg)
+
 - State Diagrams
+
+  The state diagram below shows the state changes of the `smart glove` application.
+
+  ![State diagram for the smart glove](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/State-diagram-class-diagram_nglqel.jpg)
+
+  The state diagram for the lidar object running as a thread is displayed below.
+
+  ![State diagram for the liDAR thread](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/lidar-thread-state-diagram_gfo9hg.jpg)
+
 - Class Diagrams
+
 - Sequence Diagrams
 
 **Development**
