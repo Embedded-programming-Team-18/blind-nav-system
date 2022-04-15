@@ -113,13 +113,25 @@ In this section an overview of the software design is shown through use case dia
 
 **Development**
 
-`CMAKE` `DOXYGEN`
+`c++` `CMAKE` `DOXYGEN`
+
+The - [Hardware Requirements](#hardware-requirements), [Software Development](#software-development)
+and [Installation](#installation) guides should be reviewed before commencing development using this code.
 
 **Testing**
 
+Test cases are available
+
 **Releases**
 
+- Release v1.0 is the stable version of this work and it is available for installation here.
+
 **Documentation**
+
+This work is documented here for quick start. You can also check:
+
+- Doxygen documentation [available here]().
+- [the page](https://embedded-programming-team-18.github.io/blind-nav-system/)
 
 ## Installation
 
@@ -152,9 +164,23 @@ The following steps serve as a guide for installation after Pi image is installe
 
 ## Tests
 
+The following steps can be used to run the tests.
+
 ## How to Use
 
-The usage of this work depends on your use case. In this repository, the Lidar library is configured to send PWM from the callback. The Lidar library can be customized to `output distance values` or any othe use case.
+Using this work depends on your use case. In this repository, the Lidar library is designed to send its full scan `90 distance values` to a callback which is implemented depending on the use case. The smart glove implemented in this project shows this [here](https://github.com/Embedded-programming-Team-18/blind-nav-system/blob/gh-pages/main.cpp).
+
+```
+    class DataInterface : public Lidar::DataInterface {
+        void newScanAvail(int (&data)[Lidar::nDistance]) {
+                // implement this callback function
+
+            }
+    }
+
+```
+
+To use the smart glove application, follow the installation guide [Installation](#installation).
 
 ## Contributing Guide
 
@@ -185,5 +211,7 @@ Find out more about the work on the following social media platforms:
 - [pigpio](https://abyz.me.uk/rpi/pigpio)
 
 ```
+
+  Cheers!
 
 ```
