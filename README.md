@@ -111,6 +111,10 @@ In this section an overview of the software design is shown through use case dia
 
 - Sequence Diagrams
 
+  The following diagram models the communication between objects in the smart glove software.
+
+  ![Sequence diagram for the smart glove application](https://res.cloudinary.com/dxsty3st6/image/upload/v1650067799/blind-nav-system/sequence_diagram_for_smart_glove_frxcj2.jpg)
+
 **Development**
 
 `c++` `CMAKE` `DOXYGEN`
