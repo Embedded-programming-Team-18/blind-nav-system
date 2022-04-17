@@ -97,7 +97,7 @@ In this section an overview of the software design is shown through use case dia
 
   ![A mobile robot use case of the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1650001331/blind-nav-system/robot-use-case_c97yjf.jpg)
 
-- State Diagrams
+- State Diagram
 
   The state diagram below shows the state changes of the `smart glove` application.
 
@@ -107,9 +107,9 @@ In this section an overview of the software design is shown through use case dia
 
   ![State diagram for the liDAR thread](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/lidar-thread-state-diagram_gfo9hg.jpg)
 
-- Class Diagrams
+- Class Diagram
 
-- Sequence Diagrams
+- Sequence Diagram
 
   The following diagram models the communication between objects in the smart glove software.
 
