@@ -9,3 +9,5 @@ void Pwm::sendPwm(int gpioPin,int distance){
     //std::cout<<"Min "<<minValue<<", Pwm "<<i<<": "<<pinPWM<<std::endl;
     gpioPWM(gpioPin,pinPWM);
 }
+
+Pwm::double sqr(double x) { return x*x; }

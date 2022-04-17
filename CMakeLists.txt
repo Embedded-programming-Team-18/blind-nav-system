@@ -8,6 +8,10 @@ project(blind_nav_system LANGUAGES CXX)
 include(GNUInstallDirs)
 set(CMAKE_CXX_STANDARD 11)
 
+add_subdirectory (test)
+enable_testing ()
+add_test (NAME MyTest COMMAND Test)
+
 add_compile_options(-Wall -Wconversion -Wextra -pedantic)
 
 find_package (Threads)
