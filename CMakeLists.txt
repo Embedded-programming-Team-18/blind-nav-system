@@ -47,5 +47,5 @@ install(TARGETS lidar EXPORT lidar_targets
 add_executable (blind-nav main.cpp)
 target_link_libraries(blind-nav lidar)
 
-add_executable(testRunner test/test.cpp)
-target_link_libraries(blind-nav lidar, gtest_main gmock_main)
+add_executable(testRunner test.cpp)
+target_link_libraries(testRunner lidar gtest_main gmock_main)
