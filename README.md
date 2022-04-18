@@ -80,7 +80,7 @@ This work followed Agile development approach. The various stages of the develop
       the person gets an idea of where the obstacle is located, and he can go left or right.
 ```
 
-![Image of the lidar full scan split](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_224/v1649998685/blind-nav-system/field-of-view-split-in-5_vsp8rx.jpg)
+![Image of the lidar full scan split](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_270/v1649998685/blind-nav-system/field-of-view-split-in-5_vsp8rx.jpg)
 
 A full scan of the LiDAR (90 degrees) split into 5 directions to guide the user. This is implemented in `main.cpp` where the driver is used
 
