@@ -4,6 +4,8 @@ bin-debug/
 bin-release/
 [Oo]bj/
 [Bb]in/
+_deps
+lib
 
 # Other files and folders
 .settings/
