@@ -1,6 +1,6 @@
 # Navigation System for Blind People - `Smart Glove`
 
-Development of an assistive smart glove using Light Detection and Ranging(LiDAR) technology and `Raspbery pi` to help individuals who are blind or with low vision to navigate with confidence. This project contributes a `C++ library for TFMini s sensor` and a blind navigation glove.
+An assistive smart glove using Light Detection and Ranging(LiDAR) technology and `Raspbery pi` to help individuals who are blind or with low vision to navigate with confidence. This project contributes a `C++ library for TFMini s sensor` and a blind navigation glove.
 
 ## Status
 
