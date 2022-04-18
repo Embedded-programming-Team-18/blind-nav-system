@@ -31,7 +31,7 @@ There are many assistive technologies that aid blind people navigate their envir
 
 Here a smart glove program is developed to tackle the navigation problem for blind people so that they can be confident to move without a cane or guide dog. [Find out more on our GitHub page here](https://embedded-programming-team-18.github.io/blind-nav-system/)
 
-![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/v1650268032/blind-nav-system/the_glove_fitted_gfcfet.jpg)
+![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_300/v1650268032/blind-nav-system/the_glove_fitted_gfcfet.jpg)
 
 ```
     **Why Smart Glove?**
