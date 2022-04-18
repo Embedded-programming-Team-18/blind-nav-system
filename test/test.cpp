@@ -1,12 +1,16 @@
-#define BOOST_TEST_MODULE SqrTests
-#include <boost/test/unit_test.hpp
-
+#include <gtest/gtest.h>
 #include "pwm.h"
-BOOST_AUTO_TEST_CASE(FailTest)
-{
- BOOST_CHECK_EQUAL(5, sqr(3));
+
+// Demonstrate some basic assertions.
+TEST(TestSuiteSample, TestSample) {
+  // Expect two strings not to be equal.
+  EXPECT_STRNE("hello", "world");
+  // Expect equality.
+  EXPECT_EQ(7 * 6, 42);
 }
-BOOST_AUTO_TEST_CASE(PassTest)
-{
- BOOST_CHECK_EQUAL(4, sqr(2));
+
+
+imt main(int argc, char **argv){
+    testting::InitGoogleTest(&argc,argv);
+    return RUN_ALL_TESTS;
 }

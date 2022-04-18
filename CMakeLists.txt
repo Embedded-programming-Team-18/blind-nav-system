@@ -8,17 +8,25 @@ project(blind_nav_system LANGUAGES CXX)
 include(GNUInstallDirs)
 set(CMAKE_CXX_STANDARD 11)
 
-add_subdirectory (test)
-enable_testing ()
-add_test (NAME MyTest COMMAND Test)
-
 add_compile_options(-Wall -Wconversion -Wextra -pedantic)
+
+#get googletest
+include(FetchContent)
+FetchContent_Declare(
+  googletest
+  GIT_REPOSITORY https://github.com/google/googletest.git
+  GIT_TAG release-1.11.0
+)
+FetchContent_GetProperties(googletest)
+if(NOT googletest__POPULATED)
+  FetchContent_Populate(googletest)
+  add_subdirectory(${googletest_SOURCE_DIR} ${googletest_BUILD_DIR})
+endif()
 
 find_package (Threads)
 
 set(LIBSRC Lidar.cpp Servo.cpp Pwm.cpp)
 set(LIBINCLUDE lidar.h servo.h pwm.h)
-
 
 add_library(lidar
   STATIC
@@ -38,3 +46,6 @@ install(TARGETS lidar EXPORT lidar_targets
 
 add_executable (blind-nav main.cpp)
 target_link_libraries(blind-nav lidar)
+
+add_executable(testRunner test/test.cpp)
+target_link_libraries(blind-nav lidar, gtest_main gmock_main)

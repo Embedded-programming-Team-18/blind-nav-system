@@ -10,4 +10,3 @@ void Pwm::sendPwm(int gpioPin,int distance){
     gpioPWM(gpioPin,pinPWM);
 }
 
-Pwm::double sqr(double x) { return x*x; }

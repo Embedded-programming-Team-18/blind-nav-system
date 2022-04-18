@@ -33,7 +33,6 @@ class Pwm{
         */
         void sendPwm(int gpioPin,int distance);
 
-        double sqr(double); 
 };
 
 #endif
