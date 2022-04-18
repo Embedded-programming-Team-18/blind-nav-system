@@ -125,6 +125,28 @@ and [Installation](#installation) guides should be reviewed before commencing de
 
 Google test is used for unit test in this work. Test cases are:
 
+**Pwm**
+
+```
+  Test the pwm sent according to the double threshold set
+
+  1. distance = 0, pwm = 255
+  2. distance = -2000, pwm =255
+  3. distance = 100, pwm = 0
+  3. distance = 167, pwm = 0
+  4. distance = 26550, pwm = 0  
+```
+
+**Servo::move**
+
+```
+  Test algorithm
+
+  for(int i=0; i<89; i++)
+    EXPECT_EQ(servoMove(), i+1);
+
+```
+
 **Releases**
 
 - The current release of this work is release v1.0
