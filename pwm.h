@@ -32,6 +32,7 @@ class Pwm{
         * @param distance int
         */
         void sendPwm(int gpioPin,int distance);
+
 };
 
 #endif

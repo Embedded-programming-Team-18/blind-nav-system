@@ -45,8 +45,8 @@
 */
 class DataInterface : public Lidar::DataInterface {
     private:
-        int size=5;
-        const int LED [5]={16,27,22,6,13,19};
+        int size=6;
+        const int LED [6]={16,27,22,6,13,19};
         const int thresholdMaxDist = 100;
         const int thresholdMinDist = 0;
         std::mutex dataoutMtx;
@@ -69,12 +69,10 @@ class DataInterface : public Lidar::DataInterface {
             int splitStart=0;
             int pinPWM=0;
             dataoutMtx.lock();
-            //Obstacle signal
-            pwmObj.sendPwm(LED[0],data[0])
-            // This outer loop sets the 5 minDistance that we want.
+            // This outer loop sets the minDistanc.
             for(int i=0; i<size;i++){
-                // The min value will start at i*18 which represents the 5 splits
-                splitStart = i*splitLength+1;
+                // The min value for a split
+                splitStart = i*splitLength;
                 minValue = data[splitStart];
                 // This inner loop iterate through each split to find the minValue
                 for(int j=1; j<splitLength; j++){
@@ -82,7 +80,7 @@ class DataInterface : public Lidar::DataInterface {
                         minValue=data[splitStart + j];
                     }
                 }
-                pwmObj.sendPwm(LED[i+1],minValue)
+                pwmObj.sendPwm(LED[i],minValue);
                 dataoutMtx.unlock();
             }
             
