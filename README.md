@@ -44,6 +44,8 @@ Here a smart glove program is developed to tackle the navigation problem for bli
 
 ![raspberry pi](https://res.cloudinary.com/dxsty3st6/image/upload/v1649396693/blind-nav-system/icons8-raspberry-pi-48_wvkoak.png)
 
+![Schematic Diagram of the blind navigation system](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_388/v1649389827/blind-nav-system/Schematic-diagram-image_ty0cjs.jpg)
+
 The main componenents used for this project are:
 
 - Raspberry Pi 4
@@ -51,8 +53,6 @@ The main componenents used for this project are:
 - Servo motto
 - 5 mottos
 - Logic Converter
-
-![Schematic Diagram of the blind navigation system](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_388/v1649389827/blind-nav-system/Schematic-diagram-image_ty0cjs.jpg)
 
 The servo motto board was coupled by the team and LEDs were used during the development stage. Logic converters were used to step-down voltage from +5V to +3V needed by the Lidar. The schematic diagram of the project is subject on changes. For instance, when using LEDs for the prototype `resistors` were added. [You can view this prototype here](https://www.instagram.com/p/CcE22h5jnIw/). The image gallery can be viewed on [instagram](https://www.instagram.com/blindnavsystem/)
 
@@ -108,7 +108,7 @@ and [Installation](#installation) guides should be reviewed before commencing de
 
 **Testing**
 
-    Google test is used for unit test in this work. Test cases are:
+Google test is used for unit test in this work. Test cases are:
 
     **Pwm**
     ```
@@ -150,22 +150,16 @@ The following steps serve as a guide for installation after Pi image is installe
 1. To use this Library, the following needs to be installed on your Pi.
 
 ```
-
-       * PIGPIO: [this can be found here](https://abyz.me.uk/rpi/pigpio/download.html)
-       * CMake
-
+  * PIGPIO: [this can be found here](https://abyz.me.uk/rpi/pigpio/download.html)
+  * CMake
 ```
 
 2. Enable Serioal port for `UART` on your Pi.
 3. To compile and build the code after downloading from GitHub,
-
    ```
-
-         * Cmake .
-         * Make
-
+    * Cmake .
+    * Make
    ```
-
 4. ./blind-nav executable will be created.
 
 ## Tests
