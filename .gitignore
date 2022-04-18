@@ -6,7 +6,7 @@ bin-release/
 [Bb]in/
 _deps
 lib
-
+bin
 # Other files and folders
 .settings/
 CMakeFiles/
