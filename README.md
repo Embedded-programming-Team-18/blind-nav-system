@@ -1,6 +1,6 @@
 # Navigation System for Blind People - `Smart Glove`
 
-This project involves the development of an assistive smart glove using Light Detection and Ranging(LiDAR) technology and `Raspbery pi` to help individuals who are blind or with low vision to navigate with confidence. It contributes a `C++ library for TFMini s sensor` and use it in the development the hand glove.
+Development of an assistive smart glove using Light Detection and Ranging(LiDAR) technology and `Raspbery pi` to help individuals who are blind or with low vision to navigate with confidence. This project contributes a `C++ library for TFMini s sensor` and a blind navigation glove.
 
 ## Status
 
@@ -109,17 +109,14 @@ The classes `Lidar`, `Servo`, `Pwm`, `DataInterface : Lidar::DataInterface` are 
 
 **Development**
 
-`c++` `CMAKE` `DOXYGEN` `googletest`
-
-The - [Hardware Requirements](#hardware-requirements), [Software Development](#software-development)
-and [Installation](#installation) guides should be reviewed before commencing development using this code.
+`c++` `CMAKE` and `googletest` are needed in addition to the [Hardware Requirements](#hardware-requirements).The [Software Development](#software-development)
+and [Installation](#installation) guides should be reviewed before commencing development.
 
 **Testing**
 
     Google test is used for unit test in this work. Test cases are:
 
     **Pwm**
-
     ```
       Test the pwm sent according to the double threshold set
 
@@ -131,7 +128,6 @@ and [Installation](#installation) guides should be reviewed before commencing de
     ```
 
     **Servo::move**
-
     ```
       Test algorithm
 
@@ -142,7 +138,7 @@ and [Installation](#installation) guides should be reviewed before commencing de
 
 **Releases**
 
-- The current release of this work is release v1.0
+The current release of this work is release v1.0
 
 **Documentation**
 
@@ -188,7 +184,7 @@ Steps to run tests are:
 
 ## How to Use
 
-Using this work depends on your use case. In this repository, the Lidar library is designed to send its full scan `90 distance values` to a callback which is implemented depending on the use case. The smart glove implemented in this project shows this [here](https://github.com/Embedded-programming-Team-18/blind-nav-system/blob/gh-pages/main.cpp).
+Using this work depends on your use case. In this repository, the Lidar library is designed to send its full scan `90 distance values` to a callback which is implemented depending on the use case. The smart glove implemented in this project shows this [here](https://github.com/Embedded-programming-Team-18/blind-nav-system/blob/gh-pages/main.cpp). Lastly, follow the [Installation](#installation) guide.
 
 ```
     class DataInterface : public Lidar::DataInterface {
@@ -200,11 +196,9 @@ Using this work depends on your use case. In this repository, the Lidar library 
 
 ```
 
-To use the smart glove application, follow the installation guide [Installation](#installation).
-
 ## Contributing Guide
 
-'BLIND NAVIGATION SYSTEM' accepts PR's (pull requests) from _collaborators only_ only. Issues can be submitted by any of the collaborators. [The contributing guide can be found here](https://github.com/EvelynAnyebe/blind-nav-system/blob/gh-pages/CONTRIBUTING.md)
+'BLIND NAVIGATION SYSTEM' accepts PR's (pull requests) from _collaborators only_ only.
 
 ## Social Media
 
@@ -226,12 +220,5 @@ Find out more about the work on the following social media platforms:
 ### Reference Links
 
 - [dfrobot.com](https://www.dfrobot.com/product-1702.html)
-- [README FILE-Everything you need to know](https://www.mygreatlearning.com/blog/readme-file/)
 - [berndporr/neato-xv11-lidar](https://github.com/berndporr/neato-xv11-lidar)
 - [pigpio](https://abyz.me.uk/rpi/pigpio)
-
-```
-
-  Cheers!
-
-```
