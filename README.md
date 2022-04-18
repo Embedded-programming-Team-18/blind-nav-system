@@ -80,17 +80,83 @@ This work followed Agile development approach. The various stages of the develop
       the person gets an idea of where the obstacle is located, and he can go left or right.
 ```
 
+![Image of the lidar full scan split](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/field-of-view-split-in-5_vsp8rx.jpg)
+
+A full scan of the LiDAR (90 degrees) split into 5 directions to guide the user. This is implemented in `main.cpp` where the driver is used
+
 **Software Design**
+
+The classes `Lidar`, `Servo`, `Pwm`, `DataInterface : Lidar::DataInterface` are defined for this work. The doxygen documentation [available here](https://embedded-programming-team-18.github.io/doxygen/index.html). The software design is described with the following use cases and diagrams.
+
+- Use cases
+
+  ![smart glove use case of the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1650001317/blind-nav-system/blind-man-use-case_v94lsr.jpg)
+
+  In this work, a blind navigation system as a smart glove is demonstrated with the LiDAR driver. A blind person puts on the glove and gets vibrations on his fingers. The intensity of the vibration tells the direction with the nearest obstacle. The individual can decide the direction to move.
+
+  The driver can be used for other use cases as well.
+
+  ![A mobile robot use case of the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1650001331/blind-nav-system/robot-use-case_c97yjf.jpg)
+
+- State Diagram
+
+  The state diagram below shows the state changes of the `smart glove` application.
+
+  ![State diagram for the smart glove](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/State-diagram-class-diagram_nglqel.jpg)
+
+  The state diagram for the lidar object running as a thread is displayed below.
+
+  ![State diagram for the liDAR thread](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/lidar-thread-state-diagram_gfo9hg.jpg)
+
+- Sequence Diagram
+
+  The following diagram models the communication between objects in the smart glove software.
+
+  ![Sequence diagram for the smart glove application](https://res.cloudinary.com/dxsty3st6/image/upload/v1650067799/blind-nav-system/sequence_diagram_for_smart_glove_frxcj2.jpg)
 
 **Development**
 
-`CMAKE` `DOXYGEN`
+`c++` `CMAKE` `DOXYGEN` `googletest`
+
+The - [Hardware Requirements](#hardware-requirements), [Software Development](#software-development)
+and [Installation](#installation) guides should be reviewed before commencing development using this code.
 
 **Testing**
 
+Google test is used for unit test in this work. Test cases are:
+
+**Pwm**
+
+```
+  Test the pwm sent according to the double threshold set
+
+  1. distance = 0, pwm = 255
+  2. distance = -2000, pwm =255
+  3. distance = 100, pwm = 0
+  3. distance = 167, pwm = 0
+  4. distance = 26550, pwm = 0  
+```
+
+**Servo::move**
+
+```
+  Test algorithm
+
+  for(int i=0; i<89; i++)
+    EXPECT_EQ(servoMove(), i+1);
+
+```
+
 **Releases**
 
+- The current release of this work is release v1.0
+
 **Documentation**
+
+This work is documented here for quick start. You can also check:
+
+- Doxygen documentation [available here](https://embedded-programming-team-18.github.io/doxygen/index.html).
+- [The GitHub page](https://embedded-programming-team-18.github.io/blind-nav-system/)
 
 ## Installation
 
@@ -100,26 +166,48 @@ The following steps serve as a guide for installation after Pi image is installe
 
 1. To use this Library, the following needs to be installed on your Pi.
 
-   ```
+```
+
        * PIGPIO: [this can be found here](https://abyz.me.uk/rpi/pigpio/download.html)
        * CMake
-   ```
+
+```
 
 2. Enable Serioal port for `UART` on your Pi.
 3. To compile and build the code after downloading from GitHub,
-   ```
+
+```
+
        * Cmake .
        * Make
-   ```
-4. ./blind-nav executable will be created.
 
-**Installing the library**
+```
+
+4. ./blind-nav executable will be created.
 
 ## Tests
 
+Steps to run tests are:
+
+1. cmake .
+2. make
+3. ./testRunner
+
 ## How to Use
 
-The usage of this work depends on your use case. In this repository, the Lidar library is configured to send PWM from the callback. The Lidar library can be customized to `output distance values` or any othe use case.
+Using this work depends on your use case. In this repository, the Lidar library is designed to send its full scan `90 distance values` to a callback which is implemented depending on the use case. The smart glove implemented in this project shows this [here](https://github.com/Embedded-programming-Team-18/blind-nav-system/blob/gh-pages/main.cpp).
+
+```
+    class DataInterface : public Lidar::DataInterface {
+        void newScanAvail(int (&data)[Lidar::nDistance]) {
+                // implement this callback function
+
+            }
+    }
+
+```
+
+To use the smart glove application, follow the installation guide [Installation](#installation).
 
 ## Contributing Guide
 
@@ -146,5 +234,11 @@ Find out more about the work on the following social media platforms:
 
 - [dfrobot.com](https://www.dfrobot.com/product-1702.html)
 - [README FILE-Everything you need to know](https://www.mygreatlearning.com/blog/readme-file/)
-- [Lidar code on GitHub](https://github.com/berndporr/neato-xv11-lidar)
+- [berndporr/neato-xv11-lidar](https://github.com/berndporr/neato-xv11-lidar)
 - [pigpio](https://abyz.me.uk/rpi/pigpio)
+
+```
+
+  Cheers!
+
+```
