@@ -58,7 +58,7 @@ The main componenents used for this project are:
     * Logic Converter
 ```
 
-![Schematic Diagram of the blind navigation system](https://res.cloudinary.com/dxsty3st6/image/upload/v1649389827/blind-nav-system/Schematic-diagram-image_ty0cjs.jpg)
+![Schematic Diagram of the blind navigation system](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_388/v1649389827/blind-nav-system/Schematic-diagram-image_ty0cjs.jpg)
 
 The servo motto board was coupled by the team and LEDs were used during the development stage. Logic converters were used to step-down voltage from +5V to +3V needed by the Lidar. The schematic diagram of the project is subject on changes. For instance, when using LEDs for the prototype `resistors` were added. [You can view this prototype here](https://www.instagram.com/p/CcE22h5jnIw/). The image gallery can be viewed on [instagram](https://www.instagram.com/blindnavsystem/)
 
