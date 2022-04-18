@@ -102,17 +102,17 @@ The classes `Lidar`, `Servo`, `Pwm`, `DataInterface : Lidar::DataInterface` are 
 
   The state diagram below shows the state changes of the `smart glove` application.
 
-  ![State diagram for the smart glove](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_400/v1649998685/blind-nav-system/State-diagram-class-diagram_nglqel.jpg)
+  ![State diagram for the smart glove](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/State-diagram-class-diagram_nglqel.jpg)
 
   The state diagram for the lidar object running as a thread is displayed below.
 
-  ![State diagram for the liDAR thread](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_400/v1649998685/blind-nav-system/lidar-thread-state-diagram_gfo9hg.jpg)
+  ![State diagram for the liDAR thread](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/lidar-thread-state-diagram_gfo9hg.jpg)
 
 - Sequence Diagram
 
   The following diagram models the communication between objects in the smart glove software.
 
-  ![Sequence diagram for the smart glove application](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_400/v1650067799/blind-nav-system/sequence_diagram_for_smart_glove_frxcj2.jpg)
+  ![Sequence diagram for the smart glove application](https://res.cloudinary.com/dxsty3st6/image/upload/v1650067799/blind-nav-system/sequence_diagram_for_smart_glove_frxcj2.jpg)
 
 **Development**
 
