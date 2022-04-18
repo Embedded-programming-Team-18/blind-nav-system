@@ -70,19 +70,16 @@ This work followed Agile development approach. The various stages of the develop
 
 **Requirement Analysis**
 
-```
-    * The LIDAR sensor(rotated by a servo motor) makes a map of 90o in front of the person.
+- The LIDAR sensor(rotated by a servo motor) makes a map of 90o in front of the person.
 
-    * According to the map, distance of the obstacles is calculated and returned.
+- According to the map, distance of the obstacles is calculated and returned.
 
-    * Using that feedback, PWM is sent to a finger.
-      Depending on the level of vibration on the fingers,
-      the person gets an idea of where the obstacle is located, and he can go left or right.
-```
+- Using that feedback, PWM is sent to a finger.Depending on the level of vibration on the fingers,
+  the person gets an idea of where the obstacle is located, and he can go left or right.
 
 ![Image of the lidar full scan split](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/field-of-view-split-in-5_vsp8rx.jpg)
 
-A full scan of the LiDAR (90 degrees) split into 5 directions to guide the user. This is implemented in `main.cpp` where the driver is used
+A full scan of the LiDAR (90 degrees) split into 5 directions to guide the user. This is implemented in `main.cpp` where the driver is used.
 
 **Software Design**
 
@@ -93,10 +90,6 @@ The classes `Lidar`, `Servo`, `Pwm`, `DataInterface : Lidar::DataInterface` are 
   ![smart glove use case of the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1650001317/blind-nav-system/blind-man-use-case_v94lsr.jpg)
 
   In this work, a blind navigation system as a smart glove is demonstrated with the LiDAR driver. A blind person puts on the glove and gets vibrations on his fingers. The intensity of the vibration tells the direction with the nearest obstacle. The individual can decide the direction to move.
-
-  The driver can be used for other use cases as well.
-
-  ![A mobile robot use case of the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1650001331/blind-nav-system/robot-use-case_c97yjf.jpg)
 
 - State Diagram
 
@@ -123,29 +116,29 @@ and [Installation](#installation) guides should be reviewed before commencing de
 
 **Testing**
 
-Google test is used for unit test in this work. Test cases are:
+    Google test is used for unit test in this work. Test cases are:
 
-**Pwm**
+    **Pwm**
 
-```
-  Test the pwm sent according to the double threshold set
+    ```
+      Test the pwm sent according to the double threshold set
 
-  1. distance = 0, pwm = 255
-  2. distance = -2000, pwm =255
-  3. distance = 100, pwm = 0
-  3. distance = 167, pwm = 0
-  4. distance = 26550, pwm = 0
-```
+      1. distance = 0, pwm = 255
+      2. distance = -2000, pwm =255
+      3. distance = 100, pwm = 0
+      3. distance = 167, pwm = 0
+      4. distance = 26550, pwm = 0
+    ```
 
-**Servo::move**
+    **Servo::move**
 
-```
-  Test algorithm
+    ```
+      Test algorithm
 
-  for(int i=0; i<89; i++)
-    EXPECT_EQ(servoMove(), i+1);
+      for(int i=0; i<89; i++)
+        EXPECT_EQ(servoMove(), i+1);
 
-```
+    ```
 
 **Releases**
 
@@ -176,12 +169,12 @@ The following steps serve as a guide for installation after Pi image is installe
 2. Enable Serioal port for `UART` on your Pi.
 3. To compile and build the code after downloading from GitHub,
 
-```
+   ```
 
-       * Cmake .
-       * Make
+         * Cmake .
+         * Make
 
-```
+   ```
 
 4. ./blind-nav executable will be created.
 
