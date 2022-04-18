@@ -27,22 +27,18 @@ Development of an assistive smart glove using Light Detection and Ranging(LiDAR)
 
 ## Motivation
 
-There are many assistive technologies that aid blind people navigate their enviroment. These can be in eye glasses, walking canes, helmets etc. However, the usefulness of these devices are still in debate mbecause they are usually combined with guide dogs and canes.
-
-Here a smart glove program is developed to tackle the navigation problem for blind people so that they can be confident to move without a cane or guide dog. [Find out more on our GitHub page here](https://embedded-programming-team-18.github.io/blind-nav-system/)
-
 ![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_400/v1650268032/blind-nav-system/the_glove_fitted_gfcfet.jpg)
 
-```
-    **Why Smart Glove?**
-    1. Good for mobility as it is more compact.
+Here a smart glove program is developed to tackle the navigation problem for blind people so that they can be confident to move without a cane or guide dog.
+**Why Smart Glove?**
 
-    2. Flexible for position of a person.
+1. Good for mobility as it is more compact.
 
-    3. Ease of use than cane.
+2. Flexible for position of a person.
 
-    4. More range than the stick.
-```
+3. Ease of use than cane.
+
+4. More range than the stick.
 
 ## Hardware Requirements
 
@@ -50,13 +46,11 @@ Here a smart glove program is developed to tackle the navigation problem for bli
 
 The main componenents used for this project are:
 
-```
-    * Raspberry Pi 4
-    * TFMini S LiDAR sensor
-    * Servo motto
-    * 5 mottos
-    * Logic Converter
-```
+- Raspberry Pi 4
+- TFMini S LiDAR sensor
+- Servo motto
+- 5 mottos
+- Logic Converter
 
 ![Schematic Diagram of the blind navigation system](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_388/v1649389827/blind-nav-system/Schematic-diagram-image_ty0cjs.jpg)
 
