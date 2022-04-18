@@ -86,13 +86,14 @@ A full scan of the LiDAR (90 degrees) split into 5 directions to guide the user.
 
 **Software Design**
 
-In this section an overview of the software design is shown through use case diagrams, state diagrams, sequence diagrams.
+The classes `Lidar`, `Servo`, `Pwm`, `DataInterface : Lidar::DataInterface` are defined for this work. The doxygen documentation [available here](https://embedded-programming-team-18.github.io/doxygen/index.html). The software design is described with the following use cases and diagrams.
 
 - Use cases
 
   ![smart glove use case of the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1650001317/blind-nav-system/blind-man-use-case_v94lsr.jpg)
 
-  In this work, a blind navigation system as a smart glove is demonstrated with the LiDAR driver.
+  In this work, a blind navigation system as a smart glove is demonstrated with the LiDAR driver. A blind person puts on the glove and gets vibrations on his fingers. The intensity of the vibration tells the direction with the nearest obstacle. The individual can decide the direction to move.
+
   The driver can be used for other use cases as well.
 
   ![A mobile robot use case of the lidar driver](https://res.cloudinary.com/dxsty3st6/image/upload/v1650001331/blind-nav-system/robot-use-case_c97yjf.jpg)
@@ -107,8 +108,6 @@ In this section an overview of the software design is shown through use case dia
 
   ![State diagram for the liDAR thread](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/lidar-thread-state-diagram_gfo9hg.jpg)
 
-- Class Diagram
-
 - Sequence Diagram
 
   The following diagram models the communication between objects in the smart glove software.
@@ -117,25 +116,25 @@ In this section an overview of the software design is shown through use case dia
 
 **Development**
 
-`c++` `CMAKE` `DOXYGEN`
+`c++` `CMAKE` `DOXYGEN` `googletest`
 
 The - [Hardware Requirements](#hardware-requirements), [Software Development](#software-development)
 and [Installation](#installation) guides should be reviewed before commencing development using this code.
 
 **Testing**
 
-Test cases are available
+Google test is used for unit test in this work. Test cases are:
 
 **Releases**
 
-- Release v1.0 is the stable version of this work and it is available for installation here.
+- The current release of this work is release v1.0
 
 **Documentation**
 
 This work is documented here for quick start. You can also check:
 
 - Doxygen documentation [available here](https://embedded-programming-team-18.github.io/doxygen/index.html).
-- [the page](https://embedded-programming-team-18.github.io/blind-nav-system/)
+- [The GitHub page](https://embedded-programming-team-18.github.io/blind-nav-system/)
 
 ## Installation
 
@@ -164,11 +163,13 @@ The following steps serve as a guide for installation after Pi image is installe
 
 4. ./blind-nav executable will be created.
 
-**Installing the library**
-
 ## Tests
 
-The following steps can be used to run the tests.
+Steps to run tests are:
+
+1. cmake .
+2. make
+3. ./testRunner
 
 ## How to Use
 
