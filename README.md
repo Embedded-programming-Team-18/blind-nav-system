@@ -31,7 +31,7 @@ There are many assistive technologies that aid blind people navigate their envir
 
 Here a smart glove program is developed to tackle the navigation problem for blind people so that they can be confident to move without a cane or guide dog. [Find out more on our GitHub page here](https://embedded-programming-team-18.github.io/blind-nav-system/)
 
-![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_300/v1650268032/blind-nav-system/the_glove_fitted_gfcfet.jpg)
+![smart hand glove to help blind people navigate](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_400/v1650268032/blind-nav-system/the_glove_fitted_gfcfet.jpg)
 
 ```
     **Why Smart Glove?**
@@ -80,7 +80,7 @@ This work followed Agile development approach. The various stages of the develop
       the person gets an idea of where the obstacle is located, and he can go left or right.
 ```
 
-![Image of the lidar full scan split](https://res.cloudinary.com/dxsty3st6/image/upload/c_scale,h_270/v1649998685/blind-nav-system/field-of-view-split-in-5_vsp8rx.jpg)
+![Image of the lidar full scan split](https://res.cloudinary.com/dxsty3st6/image/upload/v1649998685/blind-nav-system/field-of-view-split-in-5_vsp8rx.jpg)
 
 A full scan of the LiDAR (90 degrees) split into 5 directions to guide the user. This is implemented in `main.cpp` where the driver is used
 
