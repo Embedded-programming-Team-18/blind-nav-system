@@ -37,7 +37,7 @@ class Servo{
             step=1000/90;
             angle=0;
             startAngle=0;
-            endAngle=90;
+            endAngle=89;
         }
         int move();
 };
