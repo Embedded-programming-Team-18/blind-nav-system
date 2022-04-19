@@ -132,7 +132,7 @@ Google test is used for unit test in this work. Test cases are:
 
 **Releases**
 
-The current release of this work is release v1.0
+The current release of this work is release v1.0.
 
 **Documentation**
 
