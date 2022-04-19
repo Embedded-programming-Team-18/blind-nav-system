@@ -63,7 +63,7 @@ void Lidar::run(Lidar* Lidar) {
                 // Ask servo to move
                 Lidar->angle= Lidar->lidarServo.move();
             Lidar->readoutMtx.unlock();
-            if (Lidar->angle>=90 && nullptr!= Lidar->dataInterface){
+            if (Lidar->angle>=89 && nullptr!= Lidar->dataInterface){
                 Lidar->dataInterface->newScanAvail(Lidar->LidarData);
             }
             //std::this_thread::sleep_for(std::chrono::milliseconds(10));

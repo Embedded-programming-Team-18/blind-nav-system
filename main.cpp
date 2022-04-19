@@ -47,7 +47,7 @@ class DataInterface : public Lidar::DataInterface {
     private:
         int size=6;
         const int LED [6]={16,27,22,6,13,19};
-        const int thresholdMaxDist = 100;
+        const int thresholdMaxDist = 300;
         const int thresholdMinDist = 0;
         std::mutex dataoutMtx;
         int gpioFlag = true;
@@ -67,11 +67,8 @@ class DataInterface : public Lidar::DataInterface {
             int splitLength = Lidar::nDistance/size;
             int minValue=0;
             int splitStart=0;
-            int pinPWM=0;
             dataoutMtx.lock();
-            // This outer loop sets the minDistanc.
             for(int i=0; i<size;i++){
-                // The min value for a split
                 splitStart = i*splitLength;
                 minValue = data[splitStart];
                 // This inner loop iterate through each split to find the minValue

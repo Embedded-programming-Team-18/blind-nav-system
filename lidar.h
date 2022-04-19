@@ -31,7 +31,7 @@ class Lidar{
         /* This is the number of distances to obtain from the lidar. 
         *  It represents a complete scan (the obstacle scan + 90 scan degree field of view)
         */
-        static const unsigned nDistance = 91;
+        static const unsigned nDistance = 90;
         
         // This stores all the data received in a complete scan
         int LidarData[nDistance];
